@@ -120,9 +120,13 @@
 			$this->tvme();
 			if(is_array($this->tvp)){
 			$j = array_keys($this->tvp); $this->endterm = end($j);
+<<<<<<< HEAD
 			
 			$k = array_keys($this->voteheads[$this->endterm]); $this->endvote = end($this->voteheadnames);
 			
+=======
+			$k = array_keys($this->voteheads[$this->endterm]);$this->endvote =  fetch("select repdot2('".end($k)."')");
+>>>>>>> f2956f7b3db02ddbc513f836c165e4caa46a1239
 			if(array_sum($this->ydebt) > array_sum($this->ypay)){
 			
 			if($this->amount > 0){

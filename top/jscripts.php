@@ -177,10 +177,13 @@
 				}
 			}
 			
+<<<<<<< HEAD
 			
 			function actify(){
 				prompt("Enter Application Renewal Code");
 			}
+=======
+>>>>>>> f2956f7b3db02ddbc513f836c165e4caa46a1239
 
 			
 			

@@ -19,7 +19,11 @@ $_SESSION[$ndk]["route"] = $route = "maps";
 
 error_reporting(-1);
 
+<<<<<<< HEAD
 // echo gethash("kamolo");
+=======
+
+>>>>>>> f2956f7b3db02ddbc513f836c165e4caa46a1239
 
 function newhttpauth(){
 	
