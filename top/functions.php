@@ -1,7 +1,7 @@
 <?php
 	ob_start();
 	session_start();
-	
+	define("folder", "sites/finance");
 	define("database","ober2018");
     function db(){$db = new mysqli("localhost","root","toor",database);
 	if($db->connect_errno > 0){die(spill($db->connect_error));}elseif($db->error){ error(rx($db->error));err_verbose();}else{return $db;}}
@@ -13,8 +13,11 @@
 	$route = "";
 	define("dev_mod", 1);
 	define("DS", "/" );
-	define("DOC_ROOT", "sites" . DS . "ober");
-	define("DS2", "sites/ober");
+	$folder = explode("/",folder);
+	$folder = implode( DS ,$folder);
+	
+	define("DOC_ROOT", $folder);
+	define("DS2", folder);
 	
 	$ndk = 'ndk_4';
 	$docfolder = explode( DS, DOC_ROOT );

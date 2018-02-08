@@ -19,7 +19,6 @@ $_SESSION[$ndk]["route"] = $route = "maps";
 
 error_reporting(-1);
 
-
 function newhttpauth(){
 	
 // getkey();

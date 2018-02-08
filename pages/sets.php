@@ -1,17 +1,30 @@
 <?php 
 
-/* 2birds 1stone data-table & forms*/
+/* 2birds 1 stone data-table & forms*/
 $sw = isset($_SESSION[$ndk]["route"]) ? $_SESSION[$ndk]["route"] :  $_SESSION[$ndk]["GET"]["t"];
 
 // spill($_GET);
 // spill($sw);
+
+function get_types($me){
+	global $sid;
+	$admin = fetch("select id from user_types where scode= '$sid' and names = 'admin' ");
+	return $me == $admin? null : " and id <> $admin";
+	
+}
 
 switch($sw)
 {
 	case "users":
 		$d->passwords[] = "password";
 		$d->hide("thfile,code");
-		$d->combos["usertype"] = "select id, names from user_types where scode = '$sid'";
+		
+		if($_GET["p"] == "new"){ 
+			$condition = get_types($_SESSION[$ndk]["user"]["usertype"] );
+			$d->combos["usertype"] = "select id, names from user_types where scode = '$sid'" . $condition;} else{ 
+			$d->combos["usertype"] = "select id, names from user_types where scode = '$sid'";
+		}
+		
 		$d->aliases(["usertype"=>"user type","username"=>"user name","imagelocation"=>"photo",]);
 		$d->pictures("imagelocation");
 	break;

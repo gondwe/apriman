@@ -1,7 +1,7 @@
 		
 		
 		<script>
-			const docroot = "http://localhost/sites/ober/";
+			const docroot = "http://localhost/sites/finance/";
 			
 			function eds(url){window.location= url;}
 			function ajaxdel(url, node){ $.ajax({ url:"pages/delete.php",type:"POST",data:"id="+url}).done( function(msg){var m = $.trim(msg); console.log(m); if(m.indexOf("Error") < 0){ $("#row"+node).hide("slow"); }else{ } document.getElementById('memos').innerHTML = m;});}			
@@ -179,7 +179,10 @@
 			
 			
 			function actify(){
-				prompt("Enter Application Renewal Code");
+				var c = prompt("Enter Application Renewal Code");
+				$.post("pages/xhr/renew.php", "key=" + c, function(data){
+					document.getElementById("memos").innerHTML = data;
+				} );
 			}
 
 			

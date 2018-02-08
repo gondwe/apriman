@@ -64,7 +64,6 @@ switch($t){
 
 
 
-
 /* alias array */
 $alias = $route;
 switch($t){

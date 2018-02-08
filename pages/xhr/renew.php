@@ -2,7 +2,6 @@
 
 require ("../../top/functions.php"); 
 
-// spill($_REQUEST);
 $id = count($_POST);
 $key = strtolower(clean($_POST["key"]));
 
