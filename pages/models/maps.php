@@ -35,6 +35,24 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 
 }
 
+$dp = fetch("select vdat  from vdata where vprop = 'appmode' and xdat = '$sid'");
+
+?>
+
+<form action="devops" method="post">
+<div class="option-group">
+	<label class="btn btn-secondary">
+	<input type="radio" name="dev" class="m-3" id="option1" value="1" <?=$dp=='d'? 'checked' : null?> >Development</input>
+	</label>
+	<label class="btn btn-secondary">
+	<input type="radio" name="dev" class="m-3" id="option2" value="0"  <?=$dp=='p'? 'checked' : null?> >Production</input>
+	</label>
+	<input type="submit" value="RELOAD">
+</div>
+</form>
+
+<?php
+
 
 
 

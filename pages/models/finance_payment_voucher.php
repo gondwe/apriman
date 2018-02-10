@@ -30,7 +30,7 @@ $cost = $j["cost"];
 $paidup = fetch("select sum(amount) as paid from finance_supplier_payments where supplycombo = '$cbo' and date <= '$paidon'");
 $bal = $cost - $paidup;
 
-// spill($paidup);
+spill(new DateTime($j["paidon"]));
 // spill($bal);
 
 
@@ -39,7 +39,7 @@ $bal = $cost - $paidup;
 <div class='row'>
 <?php 
 
-printA4("voucher","p", "Names : ".rx($j["names"])."|Date : ".$j["paidon"]);
+printA4("voucher","p", "Payee Name and Address : <u>".rx($j["names"])."</u>|Date : ".$j["paidon"]);
 ?>
 
 </div>
@@ -47,10 +47,11 @@ printA4("voucher","p", "Names : ".rx($j["names"])."|Date : ".$j["paidon"]);
 <div id="" style="">
 
 <table id='voucher' >
-<tr><td width=20px>Sno.<?=$i?></td><td colspan=3>Description</td></tr>
+<tr style='border:0px'><td width=20px colspan=4 >Voucher No.<?=$i?></td></tr>
+<tr><td width=20px>Date</td><td colspan=3>Description</td></tr>
 
 <tr>
-	<td width=10%></td>
+	<td width=10%><?=$j["paidon"] ?></td>
 	<td width=70%>Being Payment for : <br><?=$j["supplies"]?><br><i><?=$j["description"]?></i></td>
 	<td width=20%>Paid:<?=$paidup?></td>
 </tr>
