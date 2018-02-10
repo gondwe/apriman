@@ -1,2 +1,2 @@
-# apriman
-institution management system
+# finance
+finance management & receipting
