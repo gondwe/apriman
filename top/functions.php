@@ -1,7 +1,7 @@
 <?php
 	ob_start();
 	session_start();
-	define("folder", "sites/finance");
+	define("folder", "finance");
 	define("database","ober2018");
     function db(){$db = new mysqli("localhost","root","toor",database);
 	if($db->connect_errno > 0){die(spill($db->connect_error));}elseif($db->error){ error(rx($db->error));err_verbose();}else{return $db;}}

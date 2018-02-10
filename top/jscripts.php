@@ -1,7 +1,7 @@
 		
 		
 		<script>
-			const docroot = "http://localhost/sites/finance/";
+			const docroot = "http://localhost/finance/";
 			
 			function eds(url){window.location= url;}
 			function ajaxdel(url, node){ $.ajax({ url:"pages/delete.php",type:"POST",data:"id="+url}).done( function(msg){var m = $.trim(msg); console.log(m); if(m.indexOf("Error") < 0){ $("#row"+node).hide("slow"); }else{ } document.getElementById('memos').innerHTML = m;});}			
