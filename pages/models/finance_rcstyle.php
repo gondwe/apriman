@@ -1,0 +1,5 @@
+<?php 
+
+$style = '<style>.receipt {width:600px;border:1px solid #aaa;display:auto;margin:0px auto;margin-bottom:2%;height:800px;/* background:pink; */padding:10px;}.rcnames {text-align:center;margin-left:-5%;display:contents;}.rcnames #name {font-size:40px;}#rclogo {width:180px;}#rclogo img {width:150px;padding:10px}#official {margin-top:10px;font-weight:bolder;font-size:15px;}#rchead {padding-bottom:20px;border-bottom:2px solid black;}#rcperson {margin-bottom:30px;}div.rcbreakdown.row #bktitle{font-weight:bolder;}div.rcbreakdown.row{margin-top:30px;padding:10px;border-top:1px solid black;border-bottom:1px solid black;}#bkdrow div {border-top:1px solid black;border-left:1px solid black;}.total {font-weight:bolder;}div.rcfooter.row div{margin-top:3px;}div.rcfooter.row{padding:10px;}.recno {border-bottom:1px solid grey;font-family:courier new;font-size:15px;}</style>';
+echo $style;
+// $style =  str_replace(["<style>","</style>",], "", $style);
