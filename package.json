@@ -1,0 +1,18 @@
+{
+  "name": "fin",
+  "version": "1.0.0",
+  "description": "finance management & receipting",
+  "main": "gulfile.js",
+  "dependencies": {
+    "gulp-copy": "^1.1.0",
+    "gulp-util": "^3.0.8"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nardtec",
+  "license": "ISC"
+}
